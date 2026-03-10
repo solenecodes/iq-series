@@ -16,21 +16,13 @@ Together, these IQs enable AI agents to reason, retrieve, and act with deep busi
 
 ## 📚 Episodes
 
-### Foundry IQ
-
 | **Episode**                                                                                                                          | **Description**                                                                    | **Video**       | **Cookbook**                                                                         |
 |--------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|-----------------|-------------------------------------------------------------------------------------| 
 | [Foundry IQ: Unlocking Knowledge for your Agents](./1-Foundry-IQ-Unlocking-Knowledge-for-Agents/README.md)                                    | Understand Foundry IQ's core components and how it fits into the agent architecture | [Mar 18, 2026](https://aka.ms/iq-series/episode1)     | [Cookbook](./1-Foundry-IQ-Unlocking-Knowledge-for-Agents/cookbook/)                |
 | [Foundry IQ: Building the Data Pipeline with Knowledge Sources](./2-Foundry-IQ-Building-the-Data-Pipeline-with-Knowledge-Sources/README.md)      | Learn how different content enters Foundry IQ from various sources                 | [Mar 25, 2026](https://aka.ms/iq-series/episode2)     | [Cookbook](./2-Foundry-IQ-Building-the-Data-Pipeline-with-Knowledge-Sources/cookbook/) |
 | [Foundry IQ: Querying the Multi-Source AI Knowledge Bases](./3-Foundry-IQ-Querying-the-Multi-Source-AI-Knowledge-Bases/README.md)                | Dive into Knowledge Bases and multi-source query paths                             | [Apr 1, 2026](https://aka.ms/iq-series/episode3)     | [Cookbook](./3-Foundry-IQ-Querying-the-Multi-Source-AI-Knowledge-Bases/cookbook/)      |
-
-### Work IQ
-
-Coming soon!
-
-### Fabric IQ
-
-Coming soon!
+| Work IQ                                                                                                                              | Coming soon!                                                                       |                 |                                                                                     |
+| Fabric IQ                                                                                                                            | Coming soon!                                                                       |                 |                                                                                     |
 
 ### Episode Format
 
@@ -57,14 +49,6 @@ We'd love to see you contributing to our repo and engaging with the experts with
 - 🤔 Do you have suggestions or have you found spelling or code errors? [Raise an issue](https://github.com/microsoft/iq-series/issues) or [Create a pull request](https://github.com/microsoft/iq-series/pulls).
 - 🚀 If you get stuck or have any questions about Microsoft IQ, join our [Discord](https://aka.ms/iq-series/discord).
 
-## Contributing
+## [Contributing](./CONTRIBUTING.md)
 
-This project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit [https://cla.opensource.microsoft.com](https://cla.opensource.microsoft.com/).
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-## Trademarks
-
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general). Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos is subject to those third parties' policies.
+## [Trademarks](./TRADEMARKS.md)
