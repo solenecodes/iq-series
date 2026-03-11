@@ -1,0 +1,18 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "search-endpoint",
+      "description": "Your Azure AI Search endpoint from deployment outputs (e.g., https://iqseries-search-abc123.search.windows.net)"
+    }
+  ],
+  "servers": {
+    "foundry-iq": {
+      "type": "sse",
+      "url": "${input:search-endpoint}/knowledgebases/earth-knowledge-base/mcp?api-version=2025-11-01-Preview",
+      "headers": {
+        "Authorization": "Bearer ${command:github.copilot.chat.mcp.getToken}"
+      }
+    }
+  }
+}
