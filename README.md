@@ -63,8 +63,14 @@ Once deployment completes, copy the **Azure AI Search endpoint** from the deploy
 Launch a Codespace and start exploring Foundry IQ with GitHub Copilot. Copilot connects to your deployed knowledge base via MCP. Ask questions about your data and get grounded, cited answers.
 
 1. Click the button above to open a Codespace
-2. Open **Copilot Chat**, click the **🔧 Tools** icon, find **foundry-iq**, and click **Start**. You'll be prompted to enter your **Azure AI Search endpoint** from the deployment Outputs tab
-3. Ask Copilot questions about your knowledge base, try these:
+2. In the terminal, set your search endpoint from the deployment Outputs tab:
+
+   ```bash
+   export SEARCH_ENDPOINT=https://<your-search-service>.search.windows.net
+   ```
+
+3. Open **Copilot Chat**, click the **🔧 Tools** icon, find **foundry-iq**, and enable it
+4. Ask Copilot questions about your knowledge base, try these:
 
    - *"What does Earth look like at night from space?"*
    - *"How do scientists use nighttime lights to study urbanization?"*
@@ -76,7 +82,7 @@ Launch a Codespace and start exploring Foundry IQ with GitHub Copilot. Copilot c
    - *"What is a knowledge source vs a knowledge base?"*
    - *"Help me create a new knowledge base with a different index"*
 
->You can also use the repo locally. Clone the repo and open in VS Code. The MCP config loads automatically and works with GitHub Copilot in VSCode. For Copilot CLI, add the MCP server with `/mcp add` or edit `~/.copilot/mcp-config.json`.
+> You can also use the repo locally. Clone the repo, open in VS Code, set the `SEARCH_ENDPOINT` environment variable, and the MCP config loads automatically.
 
 ## 🙏 Get Involved
 
