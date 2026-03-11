@@ -59,13 +59,23 @@ Once deployment completes, copy the **Azure AI Search endpoint** from the deploy
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://aka.ms/iq-series/learnwithcopilot)
 
-Launch a Codespace and start exploring Foundry IQ with GitHub Copilot. Copilot connects to your deployed knowledge base via MCP — ask it questions about your data and get grounded, cited answers.
+Launch a Codespace and start exploring Foundry IQ with GitHub Copilot. Copilot connects to your deployed knowledge base via MCP. Ask questions about your data and get grounded, cited answers.
 
 1. Click the button above to open a Codespace
-2. Open **Copilot Chat**, click the **🔧 Tools** icon, find **foundry-iq**, and click **Start** — you'll be prompted to enter your **Azure AI Search endpoint** from the deployment Outputs tab
-3. Open any cookbook notebook and use Copilot to help you learn and experiment
+2. Open **Copilot Chat**, click the **🔧 Tools** icon, find **foundry-iq**, and click **Start**. You'll be prompted to enter your **Azure AI Search endpoint** from the deployment Outputs tab
+3. Ask Copilot questions about your knowledge base, try these:
 
-You can also use this locally — clone the repo and open in VS Code. The MCP config loads automatically. For Copilot CLI, add the server with `/mcp add` or edit `~/.copilot/mcp-config.json`.
+   - *"What does Earth look like at night from space?"*
+   - *"How do scientists use nighttime lights to study urbanization?"*
+   - *"What are the brightest regions on Earth at night and why?"*
+
+4. Open any cookbook notebook and use Copilot to help you learn and experiment:
+
+   - *"Explain what this notebook does step by step"*
+   - *"What is a knowledge source vs a knowledge base?"*
+   - *"Help me create a new knowledge base with a different index"*
+
+>You can also use the repo locally. Clone the repo and open in VS Code. The MCP config loads automatically and works with GitHub Copilot in VSCode. For Copilot CLI, add the MCP server with `/mcp add` or edit `~/.copilot/mcp-config.json`.
 
 ## 🙏 Get Involved
 
