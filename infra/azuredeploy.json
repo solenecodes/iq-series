@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.39.26.7824",
-      "templateHash": "3255913851567407658"
+      "version": "0.41.2.15936",
+      "templateHash": "11450075141418089298"
     }
   },
   "parameters": {
@@ -128,7 +128,7 @@
       "aiServices": "[format('{0}-ai-{1}', parameters('resourcePrefix'), variables('uniqueSuffix'))]",
       "project": "[format('{0}-project', parameters('resourcePrefix'))]",
       "searchConnection": "iq-series-search-connection",
-      "storage": "[format('{0}stor{1}', parameters('resourcePrefix'), variables('uniqueSuffix'))]",
+      "storage": "[toLower(format('{0}st{1}', take(parameters('resourcePrefix'), 7), take(variables('uniqueSuffix'), 15)))]",
       "blobContainer": "product-manuals",
       "embeddingDeployment": "text-embedding-3-large",
       "chatDeployment": "gpt-4o-mini"
@@ -393,7 +393,7 @@
     {
       "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2022-04-01",
-      "scope": "[format('Microsoft.Search/searchServices/{0}', variables('names').search)]",
+      "scope": "[resourceId('Microsoft.Search/searchServices', variables('names').search)]",
       "name": "[guid(resourceGroup().id, variables('names').search, parameters('userObjectId'), variables('roles').searchServiceContributor)]",
       "properties": {
         "principalId": "[parameters('userObjectId')]",
@@ -407,7 +407,7 @@
     {
       "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2022-04-01",
-      "scope": "[format('Microsoft.Search/searchServices/{0}', variables('names').search)]",
+      "scope": "[resourceId('Microsoft.Search/searchServices', variables('names').search)]",
       "name": "[guid(resourceGroup().id, variables('names').search, parameters('userObjectId'), variables('roles').searchIndexDataReader)]",
       "properties": {
         "principalId": "[parameters('userObjectId')]",
@@ -421,7 +421,7 @@
     {
       "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2022-04-01",
-      "scope": "[format('Microsoft.Search/searchServices/{0}', variables('names').search)]",
+      "scope": "[resourceId('Microsoft.Search/searchServices', variables('names').search)]",
       "name": "[guid(resourceGroup().id, variables('names').search, parameters('userObjectId'), variables('roles').searchIndexDataContributor)]",
       "properties": {
         "principalId": "[parameters('userObjectId')]",
@@ -435,7 +435,7 @@
     {
       "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2022-04-01",
-      "scope": "[format('Microsoft.CognitiveServices/accounts/{0}', variables('names').openAi)]",
+      "scope": "[resourceId('Microsoft.CognitiveServices/accounts', variables('names').openAi)]",
       "name": "[guid(resourceGroup().id, variables('names').openAi, parameters('userObjectId'), variables('roles').cognitiveServicesContributor)]",
       "properties": {
         "principalId": "[parameters('userObjectId')]",
@@ -449,7 +449,7 @@
     {
       "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2022-04-01",
-      "scope": "[format('Microsoft.CognitiveServices/accounts/{0}', variables('names').aiServices)]",
+      "scope": "[resourceId('Microsoft.CognitiveServices/accounts', variables('names').aiServices)]",
       "name": "[guid(resourceGroup().id, variables('names').aiServices, parameters('userObjectId'), variables('roles').cognitiveServicesContributor)]",
       "properties": {
         "principalId": "[parameters('userObjectId')]",
@@ -463,7 +463,7 @@
     {
       "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2022-04-01",
-      "scope": "[format('Microsoft.Storage/storageAccounts/{0}', variables('names').storage)]",
+      "scope": "[resourceId('Microsoft.Storage/storageAccounts', variables('names').storage)]",
       "name": "[guid(resourceGroup().id, variables('names').storage, parameters('userObjectId'), variables('roles').storageBlobDataContributor)]",
       "properties": {
         "principalId": "[parameters('userObjectId')]",
@@ -485,7 +485,7 @@
       "condition": "[parameters('seedData')]",
       "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2022-04-01",
-      "scope": "[format('Microsoft.Search/searchServices/{0}', variables('names').search)]",
+      "scope": "[resourceId('Microsoft.Search/searchServices', variables('names').search)]",
       "name": "[guid(resourceGroup().id, variables('names').search, 'seed', variables('roles').searchServiceContributor)]",
       "properties": {
         "principalId": "[if(parameters('seedData'), reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-seed-{1}', parameters('resourcePrefix'), variables('uniqueSuffix'))), '2023-01-31').principalId, '')]",
@@ -501,7 +501,7 @@
       "condition": "[parameters('seedData')]",
       "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2022-04-01",
-      "scope": "[format('Microsoft.Search/searchServices/{0}', variables('names').search)]",
+      "scope": "[resourceId('Microsoft.Search/searchServices', variables('names').search)]",
       "name": "[guid(resourceGroup().id, variables('names').search, 'seed', variables('roles').searchIndexDataContributor)]",
       "properties": {
         "principalId": "[if(parameters('seedData'), reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-seed-{1}', parameters('resourcePrefix'), variables('uniqueSuffix'))), '2023-01-31').principalId, '')]",
@@ -517,7 +517,7 @@
       "condition": "[parameters('seedData')]",
       "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2022-04-01",
-      "scope": "[format('Microsoft.CognitiveServices/accounts/{0}', variables('names').openAi)]",
+      "scope": "[resourceId('Microsoft.CognitiveServices/accounts', variables('names').openAi)]",
       "name": "[guid(resourceGroup().id, variables('names').openAi, 'seed', variables('roles').cognitiveServicesUser)]",
       "properties": {
         "principalId": "[if(parameters('seedData'), reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-seed-{1}', parameters('resourcePrefix'), variables('uniqueSuffix'))), '2023-01-31').principalId, '')]",
