@@ -1,7 +1,6 @@
 # Episode 1: Foundry IQ: Unlocking Knowledge for your Agents
 
-<!-- Episode video thumbnail - add your thumbnail here -->
-[![Episode 1 video](../images/FIQ_Episode1.jpg)](https://aka.ms/iq-series/episode1)
+[![Episode 1 video](../images/ep1.png)](https://aka.ms/iq-series/episode1)
 
 📅 **March 18, 2026 at 9 AM PT** | 📺 [Watch the session](https://aka.ms/iq-series/episode1) | 📂 [Try the cookbook](./cookbook/)
 

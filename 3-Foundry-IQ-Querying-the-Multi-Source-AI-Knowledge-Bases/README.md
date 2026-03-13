@@ -1,7 +1,6 @@
 # Episode 3: Foundry IQ: Querying the Multi-Source AI Knowledge Bases
 
-<!-- Episode video thumbnail - add your thumbnail here -->
-[![Episode 3 video](../images/episode3-thumbnail.png)](https://aka.ms/iq-series/episode3)
+[![Episode 3 video](../images/ep3.png)](https://aka.ms/iq-series/episode3)
 
 📅 **April 1, 2026 at 9 AM PT** | 📺 [Watch the session](https://aka.ms/iq-series/episode3) | 📂 [Try the cookbook](./cookbook/)
 
